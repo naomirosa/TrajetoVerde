@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="/html-css/imagens/favicon.ico" type="image/x-icon"> <!-- imagem pequena (icon/ícone) que aparece na guia do navegador ao lado do nome da página-->
+
+    <link rel="stylesheet" type="text/css" href="/html-css/reset.css"> <!-- normalizar o comportamento do navegador -->
+
+    <link rel="stylesheet" type="text/css" href="/html-css/styles.css"> <!-- arquivo CSS que define estilos para o layout da página-->
+
+    <script src="/javascript/site.js"></script> <!-- arquivo JavaScript que contém as funções para calcular a emissão de CO2-->
+
+    
+    <title>Página Inicial - Trajeto Verde</title> 
+
+</head>
+<body>
+    <header> <!-- cabeçalho da página -->
+       <img src="/html-css/imagens/icon.png" alt="Logo do site que representa o planeta Terra" width="70" height="70" >  <!-- width é largura e height é altura-->
+
+       <div class="nome-meu-site">
+          Trajeto Verde
+       </div>
+
+       <nav> <!-- integração com outras páginas -->
+          <a href="/html-css/index.html">Página inicial</a>
+          <a href="/html-css/compensar-pegada.html">Compensar pegada</a>
+          <a href="/html-css/sobre.html">Sobre</a>
+       </nav>
+    </header>
+
+    <main> <!-- conteúdo principal da página, central -->
+
+        <section> <!--introdução do projeto-->
+             <h1>Entendendo as Emissões de CO<sub>2</sub> e a Pegada Ecológica para uma Economia Sustentável</h1>          
+                <h2>Carbono e Emissões de Carbono:</h2>
+                <p>O carbono é um elemento fundamental para a vida na Terra e faz parte de todos os seres vivos. Ele integra o ciclo natural do planeta, onde é armazenado em árvores, solo e oceanos, e reciclado constantemente pela natureza. No entanto, a intervenção humana, especialmente por meio da queima de combustíveis fósseis (como petróleo, gás natural e carvão), libera quantidades elevadas de dióxido de carbono (CO<sub>2</sub>) na atmosfera. Esse CO<sub>2</sub> é um gás de efeito estufa, o que significa que ele retém calor e contribui para o aquecimento global, intensificando as mudanças climáticas.</p>
+                <p>As emissões de carbono oriundas das atividades industriais, do desmatamento e da agricultura em larga escala alteram o equilíbrio natural do clima. A concentração crescente de CO₂ e outros gases de efeito estufa na atmosfera leva ao aumento das temperaturas globais, ao derretimento de geleiras, à elevação do nível dos mares e a eventos climáticos extremos, como secas e furacões. Reduzir essas emissões é essencial para estabilizar o clima, proteger a biodiversidade e garantir a preservação dos recursos naturais.</p>
+
+                <h2>Economia Sustentável:</h2>
+                <p>Uma economia sustentável busca harmonizar o crescimento econômico com a proteção ambiental e a inclusão social. Esse modelo prioriza o desenvolvimento de longo prazo, evitando a degradação dos ecossistemas e o esgotamento dos recursos naturais. A economia sustentável apoia práticas como o uso eficiente de recursos, a transição para fontes de energia renovável e a criação de empregos que respeitam o meio ambiente, chamados “empregos verdes.” Esse equilíbrio contribui para o bem-estar da sociedade sem comprometer a capacidade das gerações futuras de satisfazer suas próprias necessidades.</p>
+
+                <h2>Pegada Ecológica:</h2>
+                <p>A pegada ecológica mede o impacto do consumo humano sobre os recursos naturais, calculando a quantidade de terra e água necessárias para sustentar o estilo de vida e os padrões de consumo de uma população. Esse indicador também considera a capacidade do planeta de absorver resíduos, como o dióxido de carbono, e reflete até que ponto estamos excedendo a capacidade da Terra de se regenerar.</p>
+                <p>Reduzir a pegada ecológica significa adotar práticas de consumo mais conscientes, como o uso racional de recursos, a redução de resíduos e a preferência por produtos sustentáveis. Essas ações ajudam a evitar o esgotamento dos recursos naturais e promovem a preservação dos ecossistemas, contribuindo para um planeta mais saudável e para uma qualidade de vida melhor para todos.</p>
+            
+        </section>
+
+        <section> <!--consumo energia elétrica -->
+            <h2>Calcule a sua emissão de CO<sub>2</sub></h2>
+            
+                <p>Quer saber o impacto das suas atividades no meio ambiente? Calcule sua emissão de CO<sub>2</sub> com base no consumo de energia elétrica, considerando a média do consumo mensal na sua conta de luz.</p>
+                <p><input type="number" id="totalconta" placeholder="Digite o consumo em kWh"><br><br>
+            
+        </section>
+
+
+        <section> <!-- cálculo da emissão de Co2 total-->
+            <button onclick="calcularEmissao()">Calcular</button>
+
+            <div id="totalResultado">
+               <p id="resultado"></p><br>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer> <!-- rodapé da página -->
+        <p></p>
+    </footer>
+    
+</body>
+</html>
