@@ -10,7 +10,23 @@
 
     <link rel="stylesheet" type="text/css" href="/html-css/styles.css"> <!-- arquivo CSS que define estilos para o layout da página-->
 
-    <script src="/javascript/site.js"></script> <!-- arquivo JavaScript que contém as funções para calcular a emissão de CO2-->
+    <script>
+        function calcularEmissao () {
+    const consumoEnergia = parseFloat(document.getElementById("totalconta").value);
+    const fatorEmissao = 0.0385;
+
+    if (isNaN(consumoEnergia) || consumoEnergia <= 0) {
+        document.getElementById("resultado").innerText = "Por favor, insira um valor válido de consumo em kWh.";
+        return;
+    }
+    const emissaoMensal = consumoEnergia * fatorEmissao;
+    const emissaoAnual = emissaoMensal * 12;
+
+    document.getElementById("resultado").innerText = 
+        `Sua pegada de carbono para o consumo de ${consumoEnergia} kWh é de aproximadamente ${emissaoMensal.toFixed(2)} kg por mês, ` +
+        `ou seja, ${emissaoAnual.toFixed(2)} kg por ano.`;
+}   
+    </script> <!-- arquivo JavaScript que contém as funções para calcular a emissão de CO2-->
 
     
     <title>Página Inicial - Trajeto Verde</title> 
